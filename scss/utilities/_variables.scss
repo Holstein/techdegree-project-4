@@ -5,7 +5,28 @@
 
 
 /* -------------------------
-FONT VARIABLES
+Font vars
 ------------------------- */
-$primary-font-stack: 'Lato', sans-serif;
+$font-stack: 'Lato', sans-serif;
 
+/* -------------------------
+Color vars
+------------------------- */
+// Descriptive color variables
+
+$white          : #fff;
+$black          : #000;
+$grey           : #878787;
+$malibu         : #51DDFC;
+
+// Functional color variables
+
+$color-link-default : $malibu;
+$color-link-visited : $grey;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;
+
+/* -------------------------
+Breakpoint vars
+------------------------- */

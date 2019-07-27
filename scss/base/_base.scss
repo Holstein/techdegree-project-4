@@ -3,6 +3,10 @@
 // Element styles
 // **************************************
 
+* {
+    box-sizing: border-box;
+}
+
 p {
     padding: 0 10px;
 }
@@ -13,4 +17,5 @@ ul {
 
 a {
     padding: 0 10px;
+    color: $color-link-default;
 }
