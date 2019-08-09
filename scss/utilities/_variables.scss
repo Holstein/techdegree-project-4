@@ -7,26 +7,66 @@
 /* -------------------------
 Font vars
 ------------------------- */
-$font-stack: 'Lato', sans-serif;
+$font-stack-primary: 'Lato', sans-serif;
 
 /* -------------------------
 Color vars
 ------------------------- */
 // Descriptive color variables
 
-$white          : #fff;
-$black          : #000;
-$grey           : #878787;
-$malibu         : #51DDFC;
+$white              : #fff;
+$black              : #000;
+$grey               : #808080;
+
+$sunglo             : #e4757a;
+$lavender-purple    : #927BC1;
+$blue-green         : #0d98ba;
+$malibu             : #51DDFC;
+$viking             : #58E1C1;
+$emerald            : #63CC82;
+$coral              : #fd7856;
 
 // Functional color variables
 
 $color-link-default : $malibu;
 $color-link-visited : $grey;
-
+$nav-inactive-text-color: #606060;
 $color-shadow       : rgba($black,.8);
 $color-body         : $white;
+
+// UI Colors
+
+$btn-colors: (
+	default  : $malibu,
+	success  : $emerald,
+	error    : $sunglo,
+	warning  : $coral,
+	info     : $lavender-purple,
+);
+
+// $grid-col: (
+//     -3-color   : lighten($lavender-purple, 25%),
+//     -4-color   : lighten($malibu, 25%),
+//     -5-color   : lighten($emerald, 25%),
+//     -6-color  : lighten($blue-green, 25%),
+//     -7-color  : lighten($sunglo, 25%),
+//     -8-color  : lighten($coral, 25%),
+//     -12-color  : lighten($viking, 25%),
+// );
+
+/* -------------------------
+GRID SYSTEM COLOR VARIABLES
+------------------------- */
+$grid-col-12-color: lighten($viking, 15%);
+$grid-col-6-color: lighten($blue-green, 15%);
+$grid-col-4-color: lighten($malibu, 15%);
+$grid-col-3-color: lighten($lavender-purple, 15%);
+$grid-col-5-color: lighten($emerald, 15%);
+$grid-col-7-color: lighten($sunglo, 15%);
+$grid-col-8-color: lighten($coral, 15%);
+
 
 /* -------------------------
 Breakpoint vars
 ------------------------- */
+$desktop-breakpoint: 769px;
