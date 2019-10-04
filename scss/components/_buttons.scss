@@ -1,5 +1,12 @@
 // **************************************
-// utilities/_mixins.scss
+// components/_buttons.scss
 // Button styles
 // **************************************
 
+/* Button Styles------------------ */
+.btn {
+    @include bg-colors($btn-colors);
+    @include m(default) {
+      margin-top: em(20px);
+    }
+  }

@@ -17,7 +17,6 @@ Color vars
 $white              : #fff;
 $black              : #000;
 $grey               : #808080;
-
 $sunglo             : #e4757a;
 $lavender-purple    : #927BC1;
 $blue-green         : #0d98ba;
@@ -34,7 +33,7 @@ $nav-inactive-text-color: #606060;
 $color-shadow       : rgba($black,.8);
 $color-body         : $white;
 
-// UI Colors
+// Button Colors
 
 $btn-colors: (
 	default  : $malibu,
@@ -44,26 +43,16 @@ $btn-colors: (
 	info     : $lavender-purple,
 );
 
-// $grid-col: (
-//     -3-color   : lighten($lavender-purple, 25%),
-//     -4-color   : lighten($malibu, 25%),
-//     -5-color   : lighten($emerald, 25%),
-//     -6-color  : lighten($blue-green, 25%),
-//     -7-color  : lighten($sunglo, 25%),
-//     -8-color  : lighten($coral, 25%),
-//     -12-color  : lighten($viking, 25%),
-// );
-
 /* -------------------------
 GRID SYSTEM COLOR VARIABLES
 ------------------------- */
-$grid-col-12-color: lighten($viking, 15%);
-$grid-col-6-color: lighten($blue-green, 15%);
-$grid-col-4-color: lighten($malibu, 15%);
-$grid-col-3-color: lighten($lavender-purple, 15%);
-$grid-col-5-color: lighten($emerald, 15%);
-$grid-col-7-color: lighten($sunglo, 15%);
-$grid-col-8-color: lighten($coral, 15%);
+$color-col1: lighten($viking, 15%);
+$color-col6: lighten($blue-green, 15%);
+$color-col4: lighten($malibu, 15%);
+$color-col3: lighten($lavender-purple, 15%);
+$color-col5: lighten($emerald, 15%);
+$color-col7: lighten($sunglo, 15%);
+$color-col8: lighten($coral, 15%);
 
 
 /* -------------------------

@@ -7,143 +7,158 @@
 // **********************************************
 
 
-// grid base class
-.grid {
-
-  // .grid__row
-  &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-  }
-
-  // .grid__col
-  &__col {
-
-    // create grid columns dynamically
-    // loop through each column size
-    @for $i from 1 through 12 {
-
-      // concatenate CSS selector, ie when $i = 1,
-      // selector would be .grid__col--1
-      &--#{$i} {
-
-        // base styles applied to all grid columns 
-        // NOTE: could be converted to a placeholder, along with margin
-        // from the  media query
-        margin-top: 10px;
-        flex-basis: 100%;
-
-        // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
-
-          // base stlyes applied to all grid columns
-          margin-top: 0;
-
-          // make column width a percentage of the column number / total columns
-          flex-basis: #{$i / 12 * 100 + "%"} ;
-        }
-      }
-    }
+.container {
+  padding: 0 10px;
+  @include mq (medium) {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-// targets all elements with classes that begin with grid__col
-[class^=grid__col] {
-  // grid__col + grid__col, targets two sibling columns
-  & + & {
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @include mq (medium) {
+    flex-direction: row;
+  }
+}
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+.centered {
+  @include mq (medium) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
 
-      // add grid gutter
+[class^=col] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  @include mq (medium) {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+    + [class^=col] {
       margin-left: 10px;
     }
   }
 }
 
-// Grid styles in "grid system" section
-.theme__colors {
-
-  // Default styles
-  &[class^="grid__col"] {
-    @extend %grid-col-display;
-
-    @include media-query($breakpoint: $desktop-breakpoint) {
-      text-align: center;
-    }
+.col-1 {
+  @include mq (medium) {
+    flex-basis: 8.33%;
   }
-
-  // Background colors
-  &.grid__col {
-
-    // .theme__colors.grid__col--3
-    &--3 {
-      background-color: $grid-col-3-color;
-    }
-
-    // .theme__colors.grid__col--4
-    &--4 {
-      background-color: $grid-col-4-color;
-    }
-
-    // .theme__colors.grid__col--5
-    &--5 {
-      background-color: $grid-col-5-color;
-    }
-
-    // .theme__colors.grid__col--6
-    &--6 {
-      background-color: $grid-col-6-color;
-    }
-
-    // .theme__colors.grid__col--7
-    &--7 {
-      background-color: $grid-col-7-color;
-    }
-
-    // .theme__colors.grid__col--8
-    &--8 {
-      background-color: $grid-col-8-color;
-    }
-
-    // .theme__colors.grid__col--12
-    &--12 {
-      background-color: $grid-col-12-color;
-
-      // @include media-query($breakpoint: $desktop-breakpoint) {
-      //   justify-content: space-between;
-      // }
-    }
+  &.theme {
+    background-color: $color-info;
   }
 }
 
-
-// Centers element
-.centered {
-  @include media-query($breakpoint: $desktop-breakpoint) {
-    margin: auto;
+.col-2 {
+  @include mq (medium) {
+    flex-basis: 16.67%;
+  }
+  &.theme {
+    background-color: $color-warning;
   }
 }
 
-// Body styles
-.container {
-  margin: 14px 20px;
-
-  @include media-query($breakpoint: $desktop-breakpoint) {
-    margin-left: 75px;
-    margin-right: 75px;
+.col-3 {
+  @include mq (medium) {
+    flex-basis: 25.00%;
+  }
+  &.theme {
+    background-color: $color-col3;
   }
 }
 
-// Card padding in desktop view
+.col-4 {
+  @include mq (medium) {
+    flex-basis: 33.33%;
+  }
+  &.theme {
+    background-color: $color-col4;
+  }
+}
+
+.col-5 {
+  @include mq (medium) {
+    flex-basis: 41.67%;
+  }
+  &.theme {
+    background-color: $color-col5;
+  }
+}
+
+.col-6 {
+  @include mq (medium) {
+    flex-basis: 50.00%;
+  }
+  &.theme {
+    background-color: $color-col6;
+  }
+}
+
+.col-7 {
+  @include mq (medium) {
+    flex-basis: 58.33%;
+  }
+  &.theme {
+    background-color: $color-col7;
+  }
+}
+
+.col-8 {
+  @include mq (medium) {
+    flex-basis: 66.67%;
+  }
+  &.theme {
+    background-color: $color-col8;
+  }
+}
+
+.col-9 {
+  @include mq (medium) {
+    flex-basis: 75.00%
+  }
+  &.theme {
+    background-color: $color-error;
+  }
+}
+
+.col-10 {
+  @include mq (medium) {
+    flex-basis: 83.33%;
+  }
+  &.theme {
+    background-color: $color-success;
+  }
+}
+
+.col-11 {
+  @include mq (medium) {
+    flex-basis: 91.67%;
+  }
+  &.theme {
+    background-color: $color-col11;
+  }
+}
+
+.col-12 {
+  @include mq (medium) {
+    flex-basis: 100%;
+  }
+  &.theme {
+    background-color: $color-col12;
+  }
+}
+
 .card {
-  @include media-query($breakpoint: $desktop-breakpoint) {
-    padding-right: 30px;
-  }
+  flex-basis: 100%;
 }
