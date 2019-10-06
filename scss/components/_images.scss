@@ -3,29 +3,28 @@
 // Image styles
 // **************************************
 
-%image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .img {
-    &-avatar {
-      @extend %image;
-      margin-top: 10px;
-      max-width: 100%; 
-      max-height: 100%;
-    }
-  
-    &-frame {
-      @extend %image;
-      margin-top: 10px;
-      max-width: 100%;
-      padding: 13px;
-      border: 1px solid $grey;
-    }
-  
-    &-logo {
-      @extend %image;
-    }
-  }
+.img--frame {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 100%;
+  padding: 13px;
+  border: 1px solid #cdcdcd;
+}
+
+.img--avatar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+
+.img--logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

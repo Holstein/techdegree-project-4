@@ -3,38 +3,47 @@
 // Placeholders
 // **************************************
 
-/* -------------------------
-Links
-------------------------- */
 %link {
-    @include text($size: 1.1rem, $weight: 700, $color: $black, $line-height: 1.7rem);
+    color: $link-color;
+    text-decoration: none;
 }
 
-/* -------------------------
-Images
-------------------------- */
-%img {
+//Images
+
+%centered {
     display: block;
-    margin: 20px auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* -------------------------
-Nav items
-------------------------- */
-%nav {
-    display: flex;
-    flex-direction: column;
+%responsive-image {
+    max-width: 100%;
+
 }
 
-%nav__item {
-    @include text($size: 1rem, $weight: 400, $color: $nav-inactive-text-color, $line-height: null);
+//Nav Items
+
+%nav-item {
+    border-radius: 5px;
+    width: 100%;
+    padding: 1rem;
+}
+
+//Buttons
+
+%btn {
+    display: block;
     text-align: center;
-    padding: 15px 0;
-    margin: 5px 0;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
 }
 
-%grid-col-display {
-    @include text($size: 1rem, $weight: 400, $color: $black, $line-height: null);
-    padding: 12px;
-    border-radius: 6px;
+//Grid Col
+
+%grid__col {
+    display: block;
+    border-radius: 5px;
+    border: none;
 }

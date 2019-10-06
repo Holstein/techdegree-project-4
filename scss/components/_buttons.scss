@@ -4,9 +4,96 @@
 // **************************************
 
 /* Button Styles------------------ */
-.btn {
-    @include bg-colors($btn-colors);
-    @include m(default) {
-      margin-top: em(20px);
+
+.btn--default {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  background-color: map-get($button-colors, btn-default);
+  border: none;
+  font-size: 16px;
+  font-weight: $mid-font;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 11px 13px;
+}
+
+.btn--success {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  background-color: map-get($button-colors, btn-success);
+  border: none;
+  font-size: 16px;
+  font-weight: $mid-font;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 11px 13px;
+}
+
+.btn--error {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  background-color: map-get($button-colors, btn-error);
+  border: none;
+  font-size: 16px;
+  font-weight: $mid-font;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 11px 13px; 
+}
+
+.btn--warning {  
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  background-color: map-get($button-colors, btn-warning);
+  border: none;
+  font-size: 16px;
+  font-weight: $mid-font;
+  text-transform: uppercase;
+  border-radius: 5px; 
+  margin-bottom: 12px;
+  padding: 11px 13px; 
+}
+  
+.btn--info { 
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  background-color: map-get($button-colors, btn-info);
+  border: none;
+  font-size: 16px;
+  font-weight: $mid-font;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 11px 13px;
+}
+
+// Media Query Buttons
+
+.btn--info,
+.btn--default,
+.btn--error,
+.btn--success,
+.btn--warning {
+  @include mq(tablet) {
+    width: 100%;
+  }
+}
+.grid__col--12 {
+  @include mq(desktop) {
+    text-align: center;
+    
+    .theme__colors {
+      width: 16%;
+      float: left;
+      margin-left: 20px;  
     }
   }
+}

@@ -3,48 +3,65 @@
 // Typography section styles
 // **************************************
 
-// Body font-stack
-.container {
-    font-family: $font-stack-primary;
+// .container {
+//     font-family: $Lora;
+// }
+
+* {
+    font-family: $Lato;
+    @include body-copy;
 }
 
-.headline {
-
-    //.headline--primary
-    &--primary {
-        @include text($size: 2.2rem, $weight: 700, $color: $black, $line-height: null);
-        padding: 10px 0 40px 30px;
-
-        @include media-query($breakpoint: $desktop-breakpoint) {
-            font-size: 1.9rem;
-        }
-    }
-
-    //.headline--secondary
-    &--secondary {
-        @include text($size: 1.2rem, $weight: 300, $color: $black, $line-height: null);
-        padding: 75px 0 20px 0;
-
-        @include media-query($breakpoint: $desktop-breakpoint) {
-            font-size: 1rem;
-        }
-    }
+.headline--primary {
+    padding-left: 15px;
+    margin-bottom: 1em;
 }
+
+*.headline--primary {
+    @include headline--primary;
+}
+
+.headline--secondary {
+    margin-left: .5rem;
+    font-size: 1em;
+    font-weight: $light-font;
+}
+
+*.headline--secondary {
+    @include h4;
+}
+
+//  Links
 
 .link {
-    @extend %link;
+  font-size: 1em;
+  font-weight: $mid-font;
+  color: $link-color;
+  text-decoration: none;
 }
 
-.blockquote {
-    @include text($size: 1.7rem, $weight: 400, $color: $black, $line-height: 2.2rem);
-    margin: 20px 20px 0 50px;
-    padding-left: 20px;
-    border-left: 10px solid $grey;
-    border-radius: 8px;
+//  Blockquote
 
-    @include media-query($breakpoint: $desktop-breakpoint) {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        border-width: 7px;
-    }
+.blockquote {
+    @include quote;
+}
+
+.card {
+    text-align: left;
+}
+
+.card p {
+    @include body-copy;
+}
+
+#images {
+    padding-left: 10px;
+}
+
+#buttons {
+    padding-left: 10px;
+}
+
+#grid {
+    padding-left: 10px;
 }
